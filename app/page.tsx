@@ -1,69 +1,54 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="relative flex h-dvh w-full flex-col justify-center overflow-hidden">
+      <div
+        className="grain pointer-events-none fixed -inset-[10%]"
+        aria-hidden
+      />
+
+      <div className="relative mx-auto flex w-fit max-w-full flex-col items-start px-6 text-left">
+        <h1
+          aria-label="jk agency"
+          className="relative flex items-center justify-start gap-[0.15em] font-display text-[clamp(2.5rem,4vw,11rem)] font-extrabold leading-none tracking-tighter lowercase"
+        >
+          <svg
+            aria-hidden
+            viewBox="0 0 356 226"
+            fill="currentColor"
+            className="logo-reveal h-[0.8em] w-auto shrink-0 translate-y-[0.077em]"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+            <path d="M96.1982 105.662C102.578 27.8412 159.575 2.7953 187.276 0V115.725C222.531 95.9347 226.029 30.329 223.371 0H340.051C319.905 105.662 261.565 124.81 223.371 135.852C292.54 131.491 340.611 194.134 356 226H223.371C220.349 185.748 198.048 161.429 187.276 154.301V190.779C187.276 210 169.5 226 156.217 226H1.34322C-9.40141 129.059 46.9519 105.383 76.4717 105.662V213.84C90.574 213.84 95.4986 204.336 96.1982 199.584V105.662Z" />
+          </svg>
+          <span className="text-[0.85em] tracking-tighter">
+            <span className="word-reveal">agency</span>
+          </span>
+        </h1>
+
+        <p
+          style={{ "--delay": "1.3s" } as React.CSSProperties}
+          className="fade-up relative mt-6 max-w-md text-base text-foreground/70 sm:text-lg"
+        >
+          We build and design digital products by combining technology with
+          creativity. Building websites, apps, and digital experiences that help
+          businesses grow.
+        </p>
+
+        <div
+          style={{ "--delay": "1.5s" } as React.CSSProperties}
+          className="fade-up mt-6"
+        >
+          <a
+            href="mailto:info@jkagency.com"
+            className="group relative inline-block overflow-hidden rounded-full border border-white px-8 py-3 text-sm leading-[1.4] text-white transition-colors duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:text-black"
+          >
+            <span
+              aria-hidden
+              className="absolute inset-0 -translate-x-full bg-white transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+            <span className="relative">Contact us</span>
           </a>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
